@@ -36,7 +36,7 @@ Setup a development server (Install MySQl server and client, and rails 4)
 Setup a development server and create git config author settings. Also generate an ssh key (using the git config email)
 
 ```bash
-./setup.py -e development -wgc -gcname "CJ Buchmann" -gcemail "example.com" -sshkeygen
+./setup.py -e development -wgc -gcname "email@example.com" -gcemail "example.com" -sshkeygen
 ```
 
 Setup a production webserver
