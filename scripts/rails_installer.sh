@@ -4,13 +4,18 @@
 sudo apt-get install -y libxml2-dev libxslt1-dev
 
 # ruby versioner
-\curl -L https://get.rvm.io | bash -s stable
-source ~/.profile
-rvm install ruby
+echo "~~ installing RVM ~~"
+# TODO - rvm sourcing does not seem to work here
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+source ~/.rvm/scripts/rvm
+# rvm use --default
+# rvm install ruby
 
 # gem installer
 sudo apt-get install -y rubygems-integration
 
 # gems
+echo "~~ installing bundler gem ~~"
 sudo gem install bundler
-gem install rails
+echo "~~ installing rails gem ~~"
+gem install rails --no-rdoc --no-ri
