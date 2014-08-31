@@ -29,7 +29,9 @@ This purpose of this project is to allow you to quickly build a server environme
  
 ### Quick Download
 ```bash
+sudo apt-get install unzip
 wget https://github.com/cjbuchmann/server_setup/archive/master.zip
+unzip master.zip
 ```
 
 ### Usage
