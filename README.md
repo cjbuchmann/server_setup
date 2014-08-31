@@ -25,6 +25,12 @@ This purpose of this project is to allow you to quickly build a server environme
   * nginx
 * sqlserver
   * MySQL client
+  * 
+ 
+### Quick Download
+```bash
+wget https://github.com/cjbuchmann/server_setup/archive/master.zip
+```
 
 ### Usage
 
