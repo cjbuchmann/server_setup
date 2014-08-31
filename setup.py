@@ -64,7 +64,7 @@ elif args['env'] == "sqlserver":
   print "==========================="
   print ""
 
-  call('./scripts/sql_client.sh')
+  call('./scripts/sql_server.sh')
 
 elif args['env'] == "development":
   print "Installing DEVELOPMENT SERVER TOOLS"
