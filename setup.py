@@ -51,7 +51,6 @@ if args['env'] == "webserver":
   print "=========================="
   print ""
 
-  call('./scripts/sql_server.sh')
   call('./scripts/create_deployer_user.sh')
 
   call('./scripts/sql_client.sh')
