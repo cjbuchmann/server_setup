@@ -8,16 +8,6 @@ import sys
 
 print "Initializing server setup"
 
-params = {
-  'environment': 'development',
-  'withGitConfig': False
-}
-
-gitParams = {
-  'name': None,
-  'email': None
-}
-
 parser = argparse.ArgumentParser(description='Setup a server environment')
 parser.add_argument('-e', '--env',
   help='the environment to setup. IE, webserver, sqlserver or development.')
@@ -53,12 +43,33 @@ if args['with_ssh_keygen'] == True:
   call(['./scripts/setup_ssh_key.sh', args['ssh_keygen_email'] ])
 call('./scripts/core_tools.sh')
 
-if params['environment'] == "webserver":
-  print "is development server"
-elif params['environment'] == "sqlserver":
-  print "is sql server"
-elif params['environment'] == "development":
-  print "Installing development server"
+print "ENVIRONMENT IS "
+print args['env']
+
+if args['env'] == "webserver":
+  print "Installing WEBSERVER TOOLS"
+  print "=========================="
+  print ""
+
+  call('./scripts/sql_server.sh')
+  call('./scripts/create_deployer_user.sh')
+
+  call('./scripts/sql_client.sh')
+  call('./scripts/rails_installer.sh')
+  call('./scripts/webserver_tools.sh')
+
+
+elif args['env'] == "sqlserver":
+  print "Installing SQL SERVER TOOLS"
+  print "==========================="
+  print ""
+
+  call('./scripts/sql_client.sh')
+
+elif args['env'] == "development":
+  print "Installing DEVELOPMENT SERVER TOOLS"
+  print "==================================="
+  print ""
 
   call('./scripts/rails_installer.sh')
   call('./scripts/sql_client.sh')
