@@ -35,7 +35,7 @@ wget https://github.com/cjbuchmann/server_setup/archive/master.zip
 unzip master.zip
 ```
 ```bash
-sudo apt-get update && sudo apt-get install unzip && wget https://github.com/cjbuchmann/server_setup/archive/master.zip && unzip master.zip
+sudo apt-get update && sudo apt-get install unzip && wget https://github.com/cjbuchmann/server_setup/archive/master.zip && unzip master.zip && cd server_setup-master
 ```
 
 ### Usage
